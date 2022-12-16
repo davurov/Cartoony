@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVc" customModule="Cartoony" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find out who do you look like ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Xa-JP-dFY">
+                    <rect key="frame" x="50" y="50" width="220" height="72.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main" translatesAutoresizingMaskIntoConstraints="NO" id="BvK-yS-dgD">
+                    <rect key="frame" x="30" y="187" width="260" height="194"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jzZ-MZ-qO7">
+                    <rect key="frame" x="60" y="498" width="200" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewn-zF-XkB">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="40"/>
+                            <color key="backgroundColor" systemColor="labelColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="8vd-YP-WGW"/>
+                                <constraint firstAttribute="width" constant="200" id="obJ-km-FpS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Start">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="startPressed:" destination="-1" eventType="touchUpInside" id="Gl8-Pw-oH1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.43137252329999998" green="0.26274511220000002" blue="0.89803922179999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="9Xa-JP-dFY" secondAttribute="trailing" constant="50" id="1xa-y5-arr"/>
+                <constraint firstItem="9Xa-JP-dFY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="4NL-qb-7uH"/>
+                <constraint firstAttribute="bottom" secondItem="jzZ-MZ-qO7" secondAttribute="bottom" constant="30" id="9kK-cd-YU7"/>
+                <constraint firstItem="jzZ-MZ-qO7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SXU-of-OvV"/>
+                <constraint firstItem="9Xa-JP-dFY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WkA-9I-Xsz"/>
+                <constraint firstItem="BvK-yS-dgD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZYI-Mo-Ltj"/>
+                <constraint firstItem="9Xa-JP-dFY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="iNB-5S-AvU"/>
+                <constraint firstItem="BvK-yS-dgD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="q5j-ws-HMQ"/>
+            </constraints>
+            <point key="canvasLocation" x="103" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="main" width="260" height="194"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
